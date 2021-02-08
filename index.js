@@ -14,7 +14,7 @@ const config = require("./config");
 const _data = require("./lib/data");
 
 // Testing
-_data.update("test", "newFile", { fizz: "buzz" }, function (err) {
+_data.delete("test", "newFile", function (err) {
   console.log("This is the error: ", err);
 });
 
