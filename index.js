@@ -36,8 +36,8 @@ httpServer.listen(httpPort, () =>
 
 // Instantiate the HTTPs server
 const httpsServerOptions = {
-  key: fs.readFileSync("./../https/key.pem"),
-  cert: fs.readFileSync("./../https/cert.pem"),
+  key: fs.readFileSync("./https/key.pem"),
+  cert: fs.readFileSync("./https/cert.pem"),
 };
 const httpsServer = https.createServer(httpsServerOptions, (req, res) => {
   unifiedServer(req, res);
