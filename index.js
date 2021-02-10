@@ -84,10 +84,10 @@ const unifiedServer = function (req, res) {
 
     // Construct the data object to send to the handler
     const data = {
-      trimmedPath: trimmedPath,
-      qureyStringObject: qureyStringObject,
-      method: method,
-      headers: headers,
+      trimmedPath,
+      qureyStringObject,
+      method,
+      headers,
       payload: helpers.parseJsonToObject(buffer),
     };
 
