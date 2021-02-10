@@ -11,13 +11,15 @@ environments.development = {
   httpPort: 3000,
   httpsPort: 3001,
   envName: "development",
+  hashSecret: "TheIsASecret",
 };
 
 // Production environment
 environments.production = {
-  httpPort: 5000,
-  httpsPort: 5001,
+  httpPort: process.env.httpPort,
+  httpsPort: process.env.httpsPort,
   envName: "production",
+  hashSecret: process.env.hashSecret,
 };
 
 // Determine which environment was passed as command-line argument
